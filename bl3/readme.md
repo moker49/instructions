@@ -20,9 +20,8 @@ Extract here:
 
 ## Step 3
 
-Download UCP + Balands [here](files/balands_1-6.bl3hotfix).
+Download UCP + Balands: Right click [this link](files/balands_1-6.bl3hotfix), save as.
 
-![balands](assets/balands-1.png "balands")
 
 Drop it here:
 
