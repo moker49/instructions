@@ -20,7 +20,7 @@ Extract here:
 
 ## Step 3
 
-Download UCP + Balands [here](https://github.com/BLCM/bl3mods/tree/master/Aaron0000/Balands).
+Download UCP + Balands [here](files/balands_1-6.bl3hotfix).
 
 ![balands](assets/balands-1.png "balands")
 
