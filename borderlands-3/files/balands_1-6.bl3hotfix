@@ -3742,12 +3742,39 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Des
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ArmoredInfantry/Passive_Gunner_ArmoredInfantry.Default__Passive_Gunner_ArmoredInfantry_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeMayhemWeaponDamage,BasePriority,0,,0.1
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ArmoredInfantry/Passive_Gunner_ArmoredInfantry.Default__Passive_Gunner_ArmoredInfantry_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeMayhemWeaponDamage,SectionName,0,,Primary
 
-# Behind the Iron Curtain - Increase Recharge Delay Bonus to -15% per point, increase Recharge Rate Bonus to 15% per point.
+# Efren Open
+# Behind the Iron Curtain - Increase Recharge Delay Bonus to -25% per point, increase Recharge Rate Bonus to 25% per point.
 SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,-0.25
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,Secondary_13_BE03AB154A90401B6BFE67BB3B3554E0,0,,0.50
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,Secondary_13_BE03AB154A90401B6BFE67BB3B3554E0,0,,0.25
 
-# Forced Feedback - Increase percentage to restored to 15%.
+# Forced Feedback - Increase percentage to restored to 20%.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ForceFeedback/Att_Gunner_ForcedFeedback.Att_Gunner_ForcedFeedback:ValueResolver_ConstantAttributeValueResolver,Value.BaseValueConstant,0,,0.20
+
+#Drowning In Brass (15s - 60s)
+SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_DrowningInBrass,Cooldown_4_8A38A09E46E89B75CDB6F39A50278802,0,,60.0
+
+# Iron Bear cooldown
+SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,Global_IronBear_Cooldown,Cooldown_4_8A38A09E46E89B75CDB6F39A50278802,0,,30.0
+
+# lower charge weapons
+#RYNAH
+SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/RYNO/Parts/Part_HW_TOR_Barrel_RYNO.Part_HW_TOR_Barrel_RYNO:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.50000)
+#SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/RYNO/Parts/Part_HW_TOR_Barrel_RYNO.Part_HW_TOR_Barrel_RYNO:Component_WeaponChargeComponent.ChargeTime,BaseValue,0,,0.5
+
+#PlagueBearer
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Mayhem2/Gear/Weapon/_Shared//_Unique/Plague/Parts/Part_HW_TOR_Barrel_ETech_Plague.Part_HW_TOR_Barrel_ETech_Plague:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.50000)
+
+#ION CANNON
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/Gear/Weapon/_Unique/IonCannon/Parts/Part_HW_VLA_Barrel_IonCannon.Part_HW_VLA_Barrel_IonCannon:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.667)
+
+#Kickcharger
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Ixora/Gear/Weapons/_Unique/Kickcharger/Parts/Part_HW_VLA_Barrel_ETech_Kickcharger.Part_HW_VLA_Barrel_ETech_Kickcharger:WeaponUseModeSecondaryAspectData_4.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=1.33300)
+
+#Rose
+SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Geranium/Gear/Weapon/_Unique/Rose/Parts/Part_PS_JAK_Barrel_Rose.Part_PS_JAK_Barrel_Rose:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.06700)
+
+# Efren Close
+
 
 # Tenacious Defense - Make the Damage Bonus Global and ScaleSimple.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/TenaciousDefense/Status_Gunner_Tenacious_WeaponDamage_DA.Status_Gunner_Tenacious_WeaponDamage_DA,AttributeEffects,0,,((AttributeData=/Game/GameData/Attributes/Damage/Att_DamageDealtMultiplier.Att_DamageDealtMultiplier,ModifierType=ScaleSimple,BaseModifierValue=(BaseValueConstant=1,DataTableValue=(DataTable=),BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/TenaciousDefense/Status_Gunner_Tenacious_WeaponDamage_DA.Status_Gunner_Tenacious_WeaponDamage_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
@@ -3992,8 +4019,8 @@ SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Bal
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/ClickClick/StatusEffect_Gunner_ClickClick_WeaponDamage_DA.StatusEffect_Gunner_ClickClick_WeaponDamage_DA,AttributeEffects,0,,((AttributeData=/Game/GameData/Weapons/Att_Weapon_Damage.Att_Weapon_Damage,ModifierType=ScaleSimple,BaseModifierValue=(BaseValueConstant=1,DataTableValue=(DataTable=),BaseValueScale=1),Mutator=OakPlayerAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/ClickClick/StatusEffect_Gunner_ClickClick_WeaponDamage_DA.StatusEffect_Gunner_ClickClick_WeaponDamage_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')))
 SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_ClickClick,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.2
 
-# Forge - Increase Regen to 12.5%.
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Forge,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.15
+# Forge - Increase Regen to 8%.
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Forge,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.08
 
 # Big Surplus - Increase Fire Damage Bonus to 10% per point from 5%.
 SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/Gunner/_DLC/Ixora/Passives/Table_Gunner_DLCPassiveContantValues.Table_Gunner_DLCPassiveContantValues,DLCSkill2_BonusDamage,Base_17_28B25EC8493D1EB6C2138A962F659BCD,0,,0.1
