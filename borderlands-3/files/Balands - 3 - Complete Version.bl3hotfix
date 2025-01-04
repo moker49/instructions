@@ -1,6 +1,6 @@
 ###
 ### Name: Balands
-### Version: 1.6.6e
+### Version: 1.6.6
 ### Author: Aaron0000
 ### Contact: Just look for me on Shadowevil's Discord (Shadow's Hideout).
 ### Categories: major-pack, mode-balance, scaling, mayhem, gear-general, gear-anointments, qol, skill-system, char-gunner, char-operative, char-beastmaster, char-siren, bugfix, gameplay, enemy, enemy-drops, loot-system, vendor, armsrace, economy, vehicle
@@ -42,7 +42,7 @@
 ##############################
 ##### BALANDS NEWS ITEM ######
 ##############################
-InjectNewsItem,Balands v1.6.6e Active!,https://i.imgur.com/kEyGzdA.png
+InjectNewsItem,Balands v1.6.6 Active!,https://i.imgur.com/dphElZ9.png
 
 ##############################
 ####### BASIC CHANGES ########
@@ -3768,39 +3768,37 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Des
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ArmoredInfantry/Passive_Gunner_ArmoredInfantry.Default__Passive_Gunner_ArmoredInfantry_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeMayhemWeaponDamage,BasePriority,0,,0.1
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ArmoredInfantry/Passive_Gunner_ArmoredInfantry.Default__Passive_Gunner_ArmoredInfantry_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeMayhemWeaponDamage,SectionName,0,,Primary
 
-# Efren Open
-# Behind the Iron Curtain - Increase Recharge Delay Bonus to -25% per point, increase Recharge Rate Bonus to 25% per point.
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,-0.25
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,Secondary_13_BE03AB154A90401B6BFE67BB3B3554E0,0,,0.25
+# Behind the Iron Curtain - Increase Recharge Delay Bonus to -15% per point, increase Recharge Rate Bonus to 15% per point.
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,-0.15
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_BehindTheIronCurtain,Secondary_13_BE03AB154A90401B6BFE67BB3B3554E0,0,,0.15
 
-# Forced Feedback - Increase percentage to restored to 20%.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ForceFeedback/Att_Gunner_ForcedFeedback.Att_Gunner_ForcedFeedback:ValueResolver_ConstantAttributeValueResolver,Value.BaseValueConstant,0,,0.20
+# Forced Feedback - Increase percentage to restored to 15%.
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/ForceFeedback/Att_Gunner_ForcedFeedback.Att_Gunner_ForcedFeedback:ValueResolver_ConstantAttributeValueResolver,Value.BaseValueConstant,0,,0.15
 
-#Drowning In Brass (15s - 60s)
-SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_DrowningInBrass,Cooldown_4_8A38A09E46E89B75CDB6F39A50278802,0,,60.0
-
-# Iron Bear cooldown
-SparkPatchEntry,(1,2,0,),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,Global_IronBear_Cooldown,Cooldown_4_8A38A09E46E89B75CDB6F39A50278802,0,,30.0
-
-# lower charge weapons
-#RYNAH
-SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/RYNO/Parts/Part_HW_TOR_Barrel_RYNO.Part_HW_TOR_Barrel_RYNO:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.50000)
-#SparkPatchEntry,(1,1,0,),/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/RYNO/Parts/Part_HW_TOR_Barrel_RYNO.Part_HW_TOR_Barrel_RYNO:Component_WeaponChargeComponent.ChargeTime,BaseValue,0,,0.5
-
-#PlagueBearer
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Mayhem2/Gear/Weapon/_Shared//_Unique/Plague/Parts/Part_HW_TOR_Barrel_ETech_Plague.Part_HW_TOR_Barrel_ETech_Plague:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.50000)
-
-#ION CANNON
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Dandelion/Gear/Weapon/_Unique/IonCannon/Parts/Part_HW_VLA_Barrel_IonCannon.Part_HW_VLA_Barrel_IonCannon:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.667)
-
-#Kickcharger
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Ixora/Gear/Weapons/_Unique/Kickcharger/Parts/Part_HW_VLA_Barrel_ETech_Kickcharger.Part_HW_VLA_Barrel_ETech_Kickcharger:WeaponUseModeSecondaryAspectData_4.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=1.33300)
-
-#Rose
-SparkPatchEntry,(1,1,0,),/Game/PatchDLC/Geranium/Gear/Weapon/_Unique/Rose/Parts/Part_PS_JAK_Barrel_Rose.Part_PS_JAK_Barrel_Rose:AspectList_WeaponUseModeSecondaryAspectData.Component_WeaponChargeComponent,AspectList.AspectList[1].Object..Component.Object..ChargeTime,0,,(BaseValue=0.06700)
-
-# Efren Close
-
+# Full Can of Whoop Ass - Display the damage reduction.
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C,AbilityDescription.string,0,,Entering [actionskill]Iron Bear[/actionskill] causes Moze’s and her allies’ shields to immediately begin [skillbold]recharging[/skillbold] at an increased [skillbold]Shield Recharge Rate[/skillbold] and [skillbold]take reduced damage[/skillbold] for a few seconds.
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C,StatDataItems,0,,(UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C.StatDataItems_UIStatData_OakPassiveAbilityAttribute',UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C.StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction')
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,StatusEffectData,0,,/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Status_FullCan_DamageTaken.Status_FullCan_DamageTaken
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,Attribute,0,,/Game/GameData/Attributes/Damage/Att_DamageTakenMultiplier.Att_DamageTakenMultiplier
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,FormatText.string,0,,[skillbold]Damage Reduction:[/skillbold] $VALUE$
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,SignStyle,0,,EUIStatValueSignStyle::Positive
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,RoundingMode,0,,EUIStatValueRoundingMode::None
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bDisplayAsPercentage,0,,true
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bDisplayPercentAsFloat,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bDisplayAsInverse,0,,t
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bDisplayPlusSign,0,,true
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bDisplayAsOneMinus,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bCalculateWithReductionMath,0,,true
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bUseFormatText,0,,true
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bEnableValueRemapping,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bUseSupplementalStatFormatText,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bUseMinValueCondition,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bUseMaxValueCondition,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bUseMinOrMaxValueCondition,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bCanDisplayMultipleTimes,0,,false
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,bBiggerIsBetter,0,,true
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,BasePriority,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/FullCan/Passive_Gunner_FullCan.Default__Passive_Gunner_FullCan_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeDamageReduction,SectionName,0,,Primary
 
 # Tenacious Defense - Make the Damage Bonus Global and ScaleSimple.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/TenaciousDefense/Status_Gunner_Tenacious_WeaponDamage_DA.Status_Gunner_Tenacious_WeaponDamage_DA,AttributeEffects,0,,((AttributeData=/Game/GameData/Attributes/Damage/Att_DamageDealtMultiplier.Att_DamageDealtMultiplier,ModifierType=ScaleSimple,BaseModifierValue=(BaseValueConstant=1,DataTableValue=(DataTable=),BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_UrsaCorps/TenaciousDefense/Status_Gunner_Tenacious_WeaponDamage_DA.Status_Gunner_Tenacious_WeaponDamage_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')
@@ -3823,7 +3821,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Des
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_DemolitionWoman/StainlessSteelBear/StatusEffect_Gunner_Core_VeryIronBear_DA.StatusEffect_Gunner_Core_VeryIronBear_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_0,PerGradeUpgrade,0,,(BaseValueConstant=0.06,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=1)
 
 # Vampyr - Reduce the health restored to 1% per point.
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Vampyr,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.03
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Vampyr,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.01
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_DemolitionWoman/NewDemoPassive/Passive_Gunner_Vampyr.Default__Passive_Gunner_Vampyr_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute,bDisplayPercentAsFloat,0,,true
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_DemolitionWoman/NewDemoPassive/Passive_Gunner_Vampyr.Default__Passive_Gunner_Vampyr_C:StatDataItems_UIStatData_OakPassiveAbilityAttribute,RoundingMode,0,,EUIStatValueRoundingMode::None
 
@@ -3962,9 +3960,9 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Des
 
 # Iron Bank - Add a 5% Reload Speed/Repair Speed bonus per point, make it affect Heat-per-Shot as well.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA,AttributeEffects,0,,((AttributeData=/Game/GameData/Weapons/Att_Weapon_AllModes_MaxLoadedAmmo.Att_Weapon_AllModes_MaxLoadedAmmo,ModifierType=Scale,BaseModifierValue=(BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA.Mutator_OakPassiveAbilityAttributeEffectMutatorData"'),(AttributeData=/Game/GameData/Weapons/Att_Weapon_UseHeatImpulse.Att_Weapon_UseHeatImpulse,ModifierType=Scale,BaseModifierValue=(BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA.Mutator_OakPassiveAbilityAttributeEffectMutatorData_1"'),(AttributeData=/Game/GameData/Weapons/Att_Weapon_ReloadTime.Att_Weapon_ReloadTime,ModifierType=Scale,BaseModifierValue=(BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA.Mutator_OakPassiveAbilityAttributeEffectMutatorData_0"'),(AttributeData=/Game/GameData/Weapons/Att_Weapon_TapedReloadTime.Att_Weapon_TapedReloadTime,ModifierType=Scale,BaseModifierValue=(BaseValueScale=1),Mutator=OakPassiveAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA.Mutator_OakPassiveAbilityAttributeEffectMutatorData_2"'))
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_0,PerGradeUpgrade,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=-0.07)
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_0,PerGradeUpgrade,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=-0.05)
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_1,PerGradeUpgrade,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=-0.07)
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_2,PerGradeUpgrade,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=-0.07)
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData_2,PerGradeUpgrade,0,,(BaseValueConstant=1,DataTableValue=(DataTable=None),BaseValueAttribute=None,BaseValueScale=-0.05)
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C,AbilityDescription.string,0,,Increases Moze's [skillbold]Magazine Size[/skillbold], [skillbold]Reload Speed[/skillbold], [skillbold]Repair Speed[/skillbold], and reduces [skillbold]Heat per Shot[/skillbold].
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C,StatDataItems,0,,(UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C.StatDataItems_UIStatData_OakPassiveAbilityAttribute',UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C.StatDataItems_UIStatData_OakPassiveAbilityAttributeReloadSpeed',UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C.StatDataItems_UIStatData_OakPassiveAbilityAttributeHeatPerShot',UIStatData_OakPassiveAbilityAttribute'/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C.StatDataItems_UIStatData_OakPassiveAbilityAttributeRepairTime')
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/PassiveSkill_Gunner_TheIronBank.Default__PassiveSkill_Gunner_TheIronBank_C:StatDataItems_UIStatData_OakPassiveAbilityAttributeReloadSpeed,StatusEffectData,0,,/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/TheIronBank/StatusEffect_Gunner_TheIronBank_MagazineSize_DA.StatusEffect_Gunner_TheIronBank_MagazineSize_DA
@@ -4043,10 +4041,10 @@ SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Bal
 
 # Click, Click... - Reduce the Maximum Damage Bonus to 50%, make the boost ScaleSimple.
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/ClickClick/StatusEffect_Gunner_ClickClick_WeaponDamage_DA.StatusEffect_Gunner_ClickClick_WeaponDamage_DA,AttributeEffects,0,,((AttributeData=/Game/GameData/Weapons/Att_Weapon_Damage.Att_Weapon_Damage,ModifierType=ScaleSimple,BaseModifierValue=(BaseValueConstant=1,DataTableValue=(DataTable=),BaseValueScale=1),Mutator=OakPlayerAbilityAttributeEffectMutatorData'"/Game/PlayerCharacters/Gunner/_Shared/_Design/Passives/_Tree_BottomlessMags/ClickClick/StatusEffect_Gunner_ClickClick_WeaponDamage_DA.StatusEffect_Gunner_ClickClick_WeaponDamage_DA:Mutator_OakPassiveAbilityAttributeEffectMutatorData"')))
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_ClickClick,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.2
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_ClickClick,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.166667
 
-# Forge - Increase Regen to 8%.
-SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Forge,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.08
+# Forge - Increase Regen to 12.5%.
+SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/_Shared/_Design/Balance/Gunner/DataTable_Gunner_SkillsBalance.DataTable_Gunner_SkillsBalance,P_Forge,DamageScalar_2_28B25EC8493D1EB6C2138A962F659BCD,0,,0.125
 
 # Big Surplus - Increase Fire Damage Bonus to 10% per point from 5%.
 SparkLevelPatchEntry,(1,2,0,MatchAll),/Game/PlayerCharacters/Gunner/_DLC/Ixora/Passives/Table_Gunner_DLCPassiveContantValues.Table_Gunner_DLCPassiveContantValues,DLCSkill2_BonusDamage,Base_17_28B25EC8493D1EB6C2138A962F659BCD,0,,0.1
